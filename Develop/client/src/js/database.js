@@ -13,7 +13,7 @@ const initdb = async () =>
   });
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
-export const postDb = async (content) => {
+export const putDb = async (content) => {
   console.error('putDb not implemented');
 //SAME AS A POST?? LISTEN TO ANTHONYS TALK RIGHT BEFORE ACTIVITY 21
   // Create a connection to the database database and version we want to use.

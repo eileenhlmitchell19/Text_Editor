@@ -24,37 +24,37 @@ module.exports = () => {
     //   // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
     //   hot: 'only',
     // },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: './index.html',
-        title: 'Webpack Plugin',
-      }),
-      new InjectManifest({
-        swSrc: './src/sw.js',
-        swDest: 'service-worker.js',
-      }), 
-    ],
+    // plugins: [
+    //   new HtmlWebpackPlugin({
+    //     template: './index.html',
+    //     title: 'Webpack Plugin',
+    //   }),
+    //   new InjectManifest({
+    //     swSrc: './client/src/src-sw.js',
+    //     swDest: 'service-worker.js',
+    //   }), 
+    // ],
 
     module: {
       rules: [
-        {
-          test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        },
+        // {
+        //   test: /\.css$/i,
+        //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        // },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
         },
-        {
-          test: /\.m?js$/,
-          exclude: /(node_modules|bower_components)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-            },
-          },
-        },
+        // {
+        //   test: /\.m?js$/,
+        //   exclude: /(node_modules|bower_components)/,
+        //   use: {
+        //     loader: 'babel-loader',
+        //     options: {
+        //       presets: ['@babel/preset-env'],
+        //     },
+        //   },
+        // },
       ],
     },
   };
