@@ -6,12 +6,12 @@
     "workbox-webpack-plugin": "^6.5.2"
   },
   "scripts": {
-    "start:dev": "concurrently \"cd Develop/client && npm run build\" \"cd Develop/server && npm run server\" ",
+    "start:dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run server\" ",
     "start": "npm run build && cd server && node server.js",
-    "server": "cd Develop/server node server.js --ignore client",
-    "build": "cd Develop/client && npm run build",
-    "install": "cd Develop/client && npm install && cd ../server && npm install",
-    "client": "cd Develop/client && npm start"
+    "server": "cd server node server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install",
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
