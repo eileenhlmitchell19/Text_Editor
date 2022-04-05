@@ -6,7 +6,7 @@ By: Eileen Mitchell
 https://github.com/eileenhlmitchell19/Text_Editor
 
 # Heroku App
-
+https://text-editor1234.herokuapp.com/
 
 # Technologies Used
 - Express
@@ -15,9 +15,6 @@ https://github.com/eileenhlmitchell19/Text_Editor
 
 # Description
 This application allows users to run a text editor in the browser using the heroku app. Technologies include express, javascript and mongoose and will include a variety of new methods of data retrieval.
-
-# Known Bugs
-- Heroku not operational at this time
 
 # Screen Shots
 ![Project connection](./Assets/example1.jpg)
