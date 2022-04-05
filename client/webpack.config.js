@@ -28,14 +28,14 @@ module.exports = () => {
     //   hot: 'only',
     // },
     plugins: [
-    //   new HtmlWebpackPlugin({
-    //     template: './index.html',
-    //     title: 'Webpack Plugin',
-    //   }),
-      // new InjectManifest({
-      //   swSrc: './src/src-sw.js',
-      //   swDest: 'service-worker.js',
-      // }), 
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'Webpack Plugin',
+      }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js',
+      }), 
       new MiniCssExtractPlugin() 
     ],
 
