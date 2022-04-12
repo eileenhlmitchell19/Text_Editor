@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+// const StaleWhileRevalidate = require('stale-while-revalidate');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
@@ -30,13 +31,32 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Webpack Plugin',
+        title: 'JATE',
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
+        swDest: 'src-sw.js',
       }), 
-      new MiniCssExtractPlugin() 
+      new MiniCssExtractPlugin() ,
+    // ],
+    new WebpackPwaManifest({
+      fingerprints: false,
+      inject: true,
+      name: 'Contact Cards',
+      short_name: 'Contact',
+      description: 'Never forget your contacts!',
+      background_color: '#225ca3',
+      theme_color: '#225ca3',
+      start_url: '/',
+      publicPath: '/',
+      icons: [
+        {
+          src: path.resolve('src/images/logo.png'),
+          sizes: [96, 128, 192, 256, 384, 512],
+          destination: path.join('assets', 'icons'),
+        },
+      ],
+    }),
     ],
 
     module: {
