@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "client": "^0.0.1",
     "express": "^4.17.3",
     "html-webpack-plugin": "^5.5.0",
     "webpack-pwa-manifest": "^4.3.0",
